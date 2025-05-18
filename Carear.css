@@ -1,0 +1,265 @@
+ /* SCSS styled and compiled CSS */
+
+    /* Variables */
+    :root {
+      --primary-color: #0077ff;
+      --secondary-color: #00c8ff;
+      --accent-color: #ff6f61;
+      --background-color: #f5f9ff;
+      --card-bg: #ffffff;
+      --text-color: #333;
+      --border-radius: 12px;
+      --transition-time: 0.3s;
+      --shadow-color: rgba(0,0,0,0.1);
+      --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--background-color);
+      font-family: var(--font-family);
+      color: var(--text-color);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      scroll-behavior: smooth;
+    }
+
+    /* Navbar Styles */
+    nav {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      padding: 0 2rem;
+      box-shadow: 0 2px 8px var(--shadow-color);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+
+    .nav-brand {
+      color: white;
+      font-weight: 700;
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+      user-select: none;
+      cursor: default;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.4rem 0.5rem;
+      border-radius: 6px;
+      transition: background-color var(--transition-time);
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus {
+      background-color: rgba(255, 255, 255, 0.3);
+      outline: none;
+    }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .nav-toggle span {
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 4px 0;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    /* Mobile menu open effect */
+    .nav-toggle.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .nav-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .nav-toggle.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        position: fixed;
+        right: 0;
+        top: 60px;
+        background: var(--primary-color);
+        height: calc(100% - 60px);
+        width: 220px;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 1rem;
+        transform: translateX(100%);
+        transition: transform var(--transition-time) ease-in-out;
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
+      }
+
+      .nav-links.open {
+        transform: translateX(0);
+      }
+
+      .nav-toggle {
+        display: flex;
+      }
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      padding: 3rem 2rem 4rem 2rem;
+      text-align: center;
+      color: white;
+      box-shadow: 0 2px 8px var(--shadow-color);
+     
+      user-select: none;
+    }
+
+    header h1 {
+      margin: 0 0 0.5rem 0;
+      font-weight: 700;
+      font-size: 2.8rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 1.3rem;
+      font-weight: 500;
+      font-style: italic;
+      opacity: 0.85;
+    }
+
+    main {
+      flex: 1;
+      padding: 3rem 1rem 4rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .career-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+    }
+
+    .career-card {
+      background: var(--card-bg);
+      border-radius: var(--border-radius);
+      box-shadow: 0 4px 15px var(--shadow-color);
+      padding: 2rem 1.5rem;
+      cursor: pointer;
+      text-align: center;
+      transition: transform var(--transition-time), box-shadow var(--transition-time), background-color var(--transition-time);
+      border: 2px solid transparent;
+      user-select: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 220px;
+    }
+
+    .career-card:hover,
+    .career-card.active {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0, 119, 255, 0.3);
+      border-color: var(--primary-color);
+      background-color: #e6f0ff;
+    }
+
+    .career-icon {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+      user-select: none;
+    }
+
+    .career-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .career-description {
+      font-size: 1rem;
+      color: #555;
+      flex-grow: 1;
+    }
+
+    .description-panel {
+      margin-top: 3rem;
+      background: white;
+      padding: 1.8rem 2rem;
+      border-radius: var(--border-radius);
+      box-shadow: 0 6px 20px var(--shadow-color);
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: #222;
+      transition: opacity 0.4s ease;
+      min-height: 100px;
+    }
+
+    footer {
+      text-align: center;
+      color: #666;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      user-select: none;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      header p {
+        font-size: 1.1rem;
+      }
+      .career-card {
+        min-height: 180px;
+        padding: 1.5rem 1rem;
+      }
+      .career-icon {
+        font-size: 3rem;
+      }
+      .career-title {
+        font-size: 1.25rem;
+      }
+      .description-panel {
+        font-size: 1rem;
+        padding: 1.5rem 1.5rem;
+      }
+      nav {
+        padding: 0 1rem;
+      }
+    }

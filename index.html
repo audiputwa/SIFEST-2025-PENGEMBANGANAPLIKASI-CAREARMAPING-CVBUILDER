@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Career Mapping - Pilihan Karir</title>
+    <link rel="stylesheet" href="Carear.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav role="navigation" aria-label="Main Navigation">
+      <div class="nav-brand">Sifest<span>2025</span></div>
+      <div
+        class="nav-toggle"
+        aria-label="Toggle navigation menu"
+        role="button"
+        tabindex="0"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="nav-links">
+        <a href="index.html" tabindex="0">Pilihan Kareer</a>
+        <a href="./CVBuilder/CvBuilde.html" tabindex="0">Cv Builder</a>
+        <a href="./Login/Login.html" tabindex="0">Login</a>
+      </div>
+    </nav>
+
+    <header id="top">
+      <h1>Career Mapping</h1>
+      <p>
+        Panduan komprehensif untuk membantu Anda menemukan karier yang tepat.<br>
+        Klik pada setiap karier untuk melihat informasi detail mengenai peran,
+        keterampilan yang diperlukan, serta jalur pendidikan yang umum ditempuh.<br>
+        Mulailah jelajahi pilihan karier Anda sekarang dan persiapkan langkah
+        menuju masa depan profesional yang sukses.
+      </p>
+    </header>
+
+    <main>
+      <section
+        class="career-grid"
+        role="list"
+        aria-label="Pilihan Karir"
+        id="career-section"
+      >
+        <article
+          class="career-card"
+          tabindex="0"
+          data-career="webdeveloper"
+          role="listitem"
+          aria-selected="false"
+          aria-describedby="desc-webdeveloper"
+        >
+          <a
+            href="./Web/Web.html"
+            style="text-decoration: none; color: inherit"
+          >
+            <div class="career-icon" aria-hidden="true">💻</div>
+            <h2 class="career-title">Web Developer</h2>
+            <p class="career-description">
+              Membangun website yang responsif dan interaktif menggunakan
+              teknologi web modern.
+            </p>
+          </a>
+        </article>
+
+        <article
+          class="career-card"
+          tabindex="0"
+          data-career="appsdeveloper"
+          role="listitem"
+          aria-selected="false"
+          aria-describedby="desc-appsdeveloper"
+        >
+          <a
+            href="./Apps/Apps.html"
+            style="text-decoration: none; color: inherit"
+          >
+            <div class="career-icon" aria-hidden="true">📱</div>
+            <h2 class="career-title">Apps Developer</h2>
+            <p class="career-description">
+              Mengembangkan aplikasi mobile yang nyaman digunakan di berbagai
+              platform.
+            </p>
+          </a>
+        </article>
+
+        <article
+          class="career-card"
+          tabindex="0"
+          data-career="softwaredeveloper"
+          role="listitem"
+          aria-selected="false"
+          aria-describedby="desc-softwaredeveloper"
+        >
+          <a
+            href="./Software/Software.html"
+            style="text-decoration: none; color: inherit"
+          >
+            <div class="career-icon" aria-hidden="true">🖥️</div>
+            <h2 class="career-title">Software Developer</h2>
+            <p class="career-description">
+              Membangun perangkat lunak yang efektif dan handal untuk berbagai
+              kebutuhan bisnis.
+            </p>
+          </a>
+        </article>
+
+        <article
+          class="career-card"
+          tabindex="0"
+          data-career="desaingrafis"
+          role="listitem"
+          aria-selected="false"
+          aria-describedby="desc-desaingrafis"
+        >
+          <a
+            href="./Desain/Desain.html"
+            style="text-decoration: none; color: inherit"
+          >
+            <div class="career-icon" aria-hidden="true">🎨</div>
+            <h2 class="career-title">Desain Grafis</h2>
+            <p class="career-description">
+              Menciptakan karya visual yang menarik dan komunikatif untuk
+              berbagai media.
+            </p>
+          </a>
+        </article>
+
+        <article
+          class="career-card"
+          tabindex="0"
+          data-career="digitalmarketing"
+          role="listitem"
+          aria-selected="false"
+          aria-describedby="desc-digitalmarketing"
+        >
+          <a
+            href="./DigitalMarketing/DigitalMarketing.html"
+            style="text-decoration: none; color: inherit"
+          >
+            <div class="career-icon" aria-hidden="true">📊</div>
+            <h2 class="career-title">Digital Marketing</h2>
+            <p class="career-description">
+              Merancang dan menjalankan strategi pemasaran digital guna
+              meningkatkan brand awareness.
+            </p>
+          </a>
+        </article>
+
+        <article
+          class="career-card"
+          tabindex="0"
+          data-career="gamedeveloper"
+          role="listitem"
+          aria-selected="false"
+          aria-describedby="desc-gamedeveloper"
+        >
+          <a
+            href="./Game/Game.html"
+            style="text-decoration: none; color: inherit"
+          >
+            <div class="career-icon" aria-hidden="true">🎮</div>
+            <h2 class="career-title">Game Developer</h2>
+            <p class="career-description">
+              Mengembangkan game interaktif dan menarik dengan programming dan
+              desain grafis khusus game.
+            </p>
+          </a>
+        </article>
+      </section>
+
+      <section
+        class="description-panel"
+        aria-live="polite"
+        aria-atomic="true"
+        id="career-desc"
+      >
+        <p>Silakan pilih karir di atas untuk melihat informasi lebih lanjut.</p>
+      </section>
+    </main>
+
+    <footer>&copy; Audi Putwa Niriyawan(241091700050) 02SISP001</footer>
+
+    <script src="Carear.js"></script>
+  </body>
+</html>

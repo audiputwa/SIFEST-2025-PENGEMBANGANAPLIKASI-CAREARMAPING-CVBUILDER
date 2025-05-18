@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CV Builder - CareerMap</title>
+    <link rel="stylesheet" href="CV.css" />
+  </head>
+  <body>
+    <nav role="navigation" aria-label="Main Navigation">
+        <div class="nav-brand">Sifest<span>2025</span></div>
+        <div class="nav-toggle" aria-label="Toggle navigation menu" role="button" tabindex="0" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html" tabindex="0">Pilihan Kareer</a>
+            <a href="../CVBuilder/CvBuilde.html" tabindex="0">Cv Builder</a>
+            <a href="../Login/Login.html" tabindex="0">Login</a>
+        </div>
+    </nav>
+
+    <main>
+        <h1>CV Builder</h1>
+        <form id="svForm" aria-label="Form builder untuk Surat Lamaran atau Curriculum Vitae" enctype="multipart/form-data">
+            <label for="photo">Foto</label>
+            <input type="file" id="photo" name="photo" accept="image/*" aria-describedby="photoHelp" />
+            <small id="photoHelp" style="color: #555">Unggah foto wajah terbaru (opsional)</small>
+
+            <label for="fullName">Nama Lengkap</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Nama Anda" required />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="email@example.com" required />
+
+            <label for="phone">Nomor Telepon</label>
+            <input type="number" id="phone" name="phone" placeholder="0812xxxxxxx" required pattern="[0-9+ -]*" />
+
+            <label for="careerChoice">Pilihan Karir</label>
+            <select id="careerChoice" name="careerChoice" required>
+                <option value="" disabled selected>Pilih karir</option>
+                <option value="Web Developer">Web Developer</option>
+                <option value="Apps Developer">Apps Developer</option>
+                <option value="Software Developer">Software Developer</option>
+                <option value="Desain Grafis">Desain Grafis</option>
+                <option value="Digital Marketing">Digital Marketing</option>
+                <option value="Game Developer">Game Developer</option>
+            </select>
+
+            <label for="education">Pendidikan (sebutkan gelar, institusi, tahun)</label>
+            <textarea id="education" name="education" placeholder="Contoh: S1 Teknik Informatika, Universitas XYZ, 2020 - 2024" rows="3" required></textarea>
+
+            <label for="skills">Keahlian (pisahkan dengan koma)</label>
+            <textarea id="skills" name="skills" placeholder="Misal: HTML, CSS, JavaScript, React" rows="2" required></textarea>
+
+            <label for="experience">Pengalaman Kerja (sebutkan posisi, perusahaan, durasi, deskripsi singkat)</label>
+            <textarea id="experience" name="experience" placeholder="Contoh:
+Frontend Developer - PT ABC (2021-2023)
+- Membangun UI aplikasi menggunakan React." rows="4" required></textarea>
+
+            <button type="submit">Buat CV</button>
+        </form>
+
+        <section id="cvPreview" aria-live="polite" aria-atomic="true" class="cv-preview" hidden></section>
+
+        <button id="downloadBtn" aria-label="Download CV sebagai PDF">Download PDF</button>
+    </main>
+
+    <footer>&copy; Audi Putwa Niriyawan(241091700050) 02SISP001</footer>
+
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.plugin.html.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    
+    <!-- Main JS -->
+    <script src="CV.js"></script>
+  </body>
+</html>

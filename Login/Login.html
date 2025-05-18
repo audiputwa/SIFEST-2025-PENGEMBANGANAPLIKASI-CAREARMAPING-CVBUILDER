@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login & Registration Form</title>
+  <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+  <nav role="navigation" aria-label="Main Navigation">
+    <div class="nav-brand">Sifest<span>2025</span></div>
+    <div class="nav-toggle" aria-label="Toggle navigation menu" role="button" tabindex="0" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav-links">
+      <a href="../index.html" tabindex="0">Pilihan Kareer</a>
+      <a href="../CVBuilder/CvBuilde.html" tabindex="0">Cv Builder</a>
+      <a href="../Login/Login.html" tabindex="0">Login</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <input type="checkbox" id="check">
+    <div class="form-wrapper">
+      <!-- Login Form -->
+      <div class="login form">
+        <header>Login</header>
+        <form action="#">
+          <input type="text" placeholder="Enter your email">
+          <input type="password" placeholder="Enter your password">
+          <a href="#">Forgot password?</a>
+          <input type="button" class="button" value="Login">
+        </form>
+        <div class="signup">
+          <span>Don't have an account? <label for="check">Signup</label></span>
+        </div>
+      </div>
+
+      <!-- Signup Form -->
+      <div class="registration form">
+        <header>Signup</header>
+        <form action="#">
+          <input type="text" placeholder="Enter your email">
+          <input type="password" placeholder="Create a password">
+          <input type="password" placeholder="Confirm your password">
+          <input type="button" class="button" value="Signup">
+        </form>
+        <div class="signup">
+          <span>Already have an account? <label for="check">Login</label></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="Login.js"></script>
+</body>
+</html>
